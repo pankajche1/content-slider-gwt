@@ -1,0 +1,159 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style  type='com.gmail.pankajche1.contentslider.client.slider3.View3Impl.View3Style'>
+		 .rootPanel{
+           border:1px solid #0f0;
+           -moz-box-shadow:    inset 0 0 10px #000000;
+   	       -webkit-box-shadow: inset 0 0 10px #000000;
+   		   box-shadow:         inset 0 0 10px #000000;
+   		   position:relative;
+         /*  width:980px;*/
+        /*  padding:5px 0;*/
+       }
+       /* this contains the slider and the left right direction change buttons on the sides*/
+       .sliderPanel{
+           /*width:964px;*/
+           margin-left:auto;
+           margin-right:auto;
+           /*border:1px solid #0f0;*/
+         }
+       /* this is the mask and contains the slider */
+       .content{
+           /* border:1px solid #ff0;*/
+            position:relative;
+            /*height:145px;*/
+           /* height:225px;
+            width:880px;*/
+            overflow:hidden;
+            margin:0 auto;
+    
+       }
+        .container{
+    
+          /*??????*/
+           /*width:2260px;
+           height:195px;*/
+           left:0px;
+          /* top:5px;*/
+           position:absolute;
+        }
+        .item{
+           /*width:220px;*/
+          /* width:215px;
+           height:215px;*/
+           background-color:#eef;
+           float:left;
+           /*margin-right:5px;*/
+         }
+        .itemSized{
+	       width:50px;
+	       height:50px;
+	       overflow:hidden;
+	     }
+         .leftScroll{
+            /*width:42px;
+            height:225px;*/
+            background-color:#000;
+           /* float:left;*/
+           /* line-height:225px;*/
+            position:absolute;
+            opacity:0.8;
+            left:0;
+            top:0;
+         }
+         .rightScroll{
+            /*width:42px;
+            height:225px;*/
+            background-color:#000;
+           /* float:right;*/
+            /*line-height:225px;*/
+           position:absolute;
+           opacity:0.8;
+           right:0;
+           top:0;
+         }
+         .scrollBtnPanel{
+    
+           }
+         /* contains the three buttons for pause and left, right scroll switch */
+        .controlPanel{
+    
+           padding:2px;
+           /*border:1px solid #ccc;*/
+           margin:2px;
+          /* background-color:#efe;*/
+    
+        }
+        .controlBase{
+            float:right;
+            padding:0 20px;
+            background-color:#eef;
+            border-radius:8px; 
+            line-height:16px;
+            
+        }
+        .toggleButton{
+           float:right;
+           text-align:center;
+            border:1px solid #eef;
+          
+    
+        }
+        .toggleButton:hover{
+          border:1px solid #ccc;
+          
+    
+        }
+        /* these are the left and right scroll direction change arrow buttons */
+        .scrollButton{
+           text-align:center;
+          /* margin-top:95px;*/
+           /* border:1px solid #ccc;*/
+          /* position:absolute;*/
+           /* for web site uncomment these */
+          /*top:105px;
+           left:10px;*/
+          /*display:inline-block;*/
+          position:absolute;
+    
+        }
+         .clearBoth{
+    
+           clear:both;
+        }
+        .cachePanel{
+	       display:none;
+	   }
+	   .holder{
+	       width:50px;
+	       height:50px;
+	       background-color:#eef;
+	       float:left;
+	   }
+	   /* for detecting mouse in and out gestures */
+	   .mousePanel{
+			border:1px solid #f00;
+			margin:0 auto;
+			/*position:absolute;*/
+		}
+	</ui:style>
+	<g:HTMLPanel>
+	 <g:HTMLPanel ui:field="rootPanel" styleName="{style.rootPanel}">
+	 	
+        <!--  this panel is the mask which contains the slider -->
+        <g:FocusPanel ui:field='basePanel' styleName="{style.mousePanel}" >
+       	 <g:HTMLPanel ui:field='content' styleName="{style.content}"></g:HTMLPanel>
+        </g:FocusPanel>
+     	<g:HTMLPanel ui:field="leftScroll" styleName="{style.leftScroll}"></g:HTMLPanel>
+     	<g:HTMLPanel ui:field="rightScroll" styleName="{style.rightScroll}"></g:HTMLPanel>
+     	
+     	
+     	<g:HTML styleName="{style.clearBoth}"></g:HTML>
+	 </g:HTMLPanel>
+	 <g:HTMLPanel ui:field='cachePanel' styleName="{style.cachePanel}"></g:HTMLPanel>
+	 <g:Button ui:field='btnLeftFromRight'>left from right</g:Button>
+	 <g:Button ui:field='btnLeftToRight'>left To right</g:Button>
+	 <g:Button ui:field='btnPause'>Pause</g:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 

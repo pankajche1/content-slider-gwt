@@ -1,0 +1,16 @@
+# ignore these file and folders:
+/node_modules
+/public/js/lib
+*.pyc
+*~
+*.swp
+*.swo
+*.geany
+*.log
+error.log
+/.settings
+/war
+/doc
+.classpath
+.project
+

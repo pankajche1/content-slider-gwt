@@ -1,0 +1,144 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style type='com.gmail.pankajche1.contentslider.client.ContentSlider1.Style'>
+	   .rootPanel{
+	       /*border:1px solid #ccc;*/
+	       width:980px;
+	    /*  padding:5px 0;*/
+	   }
+	   /* this is the mask which shows only through its width and height*/
+	   .content{
+	        border:1px solid #ff0;
+	        position:relative;
+	        /*height:145px;*/
+	       /* height:225px;
+	        width:880px;*/
+	        overflow:hidden;
+	        margin:0 auto;
+	
+	   }
+	   /* this is the slider which slides during the animation */
+		.container{
+	
+	     
+	       /*width:2260px;
+	       height:195px;*/
+	       left:0px;
+	       top:5px;
+	       position:absolute;
+	    }
+	    /* these are the items on the container sldier */
+	    .item{
+	       /*width:220px;*/
+	       width:215px;
+	       height:215px;
+	       background-color:#eef;
+	       float:left;
+	       margin-right:5px;
+	     }
+	     /* focus panel which responds to mouse in and out events*/
+	     .basePanel{
+	       width:964px;
+	       margin-left:auto;
+	       margin-right:auto;
+	      /* border:1px solid #555;*/
+	     }
+	     .leftScroll{
+	        width:42px;
+	        height:225px;
+	        background-color:#eef;
+	        float:left;
+	        line-height:225px;
+	        position:relative;
+	     }
+	     .rightScroll{
+	        width:42px;
+	        height:225px;
+	        background-color:#eef;
+	        float:right;
+            line-height:225px;
+	       position:relative;
+	     }
+	     .scrollBtnPanel{
+	
+	       }
+	     /* contains the three buttons for pause and left, right scroll switch */
+	    .controlPanel{
+	
+	       padding:2px;
+	       /*border:1px solid #ccc;*/
+	       margin:2px;
+	      /* background-color:#efe;*/
+	
+	    }
+	    .controlBase{
+	        float:right;
+	        padding:0 20px;
+	        background-color:#eef;
+	        border-radius:8px; 
+	        line-height:16px;
+	        
+	    }
+	    .toggleButton{
+	       float:right;
+	       text-align:center;
+	        border:1px solid #eef;
+	      
+	
+	    }
+	    .toggleButton:hover{
+          border:1px solid #ccc;
+          
+    
+        }
+	    .scrollButton{
+	       text-align:center;
+	      /* margin-top:95px;*/
+	       /* border:1px solid #ccc;*/
+	       position:absolute;
+	       /* for web site uncomment these */
+	     /*  top:105px;
+	       left:10px;*/
+	      
+	
+	    }
+	     .clearBoth{
+	
+	       clear:both;
+	    }
+	</ui:style>
+	<g:HTMLPanel ui:field="rootPanel" styleName="{style.rootPanel}">
+	
+	
+	   <g:FocusPanel ui:field='basePanel' styleName='{style.basePanel}'>
+	       <g:HTMLPanel>
+	           <!--<g:FocusPanel ui:field='leftScrollBtnPanel' styleName='{style.scrollBtnPanel}'>-->
+	           <g:HTMLPanel ui:field="leftScroll" styleName="{style.leftScroll}"></g:HTMLPanel>
+	           <!--</g:FocusPanel>-->
+	           <!--<g:FocusPanel ui:field='rightScrollBtnPanel' styleName='{style.scrollBtnPanel}'>-->
+	           <g:HTMLPanel ui:field="rightScroll" styleName="{style.rightScroll}"></g:HTMLPanel>
+	           <!--</g:FocusPanel>-->
+	  
+	           <g:HTMLPanel ui:field='content' styleName="{style.content}">
+	           <!-- <g:HTMLPanel ui:field="target" styleName="{style.container}" ></g:HTMLPanel> -->
+	           </g:HTMLPanel>
+	  
+	           <g:HTML styleName="{style.clearBoth}"></g:HTML>
+	       </g:HTMLPanel>
+	   </g:FocusPanel>
+	   
+	 <g:HTMLPanel ui:field="controlPanel" styleName="{style.controlPanel}">
+	   <g:HTMLPanel ui:field='controlBase' styleName="{style.controlBase}">
+	    
+	   
+	   </g:HTMLPanel>
+	   <!-- 
+      	<g:Button ui:field='btnPause'>Pause</g:Button>
+        <g:Button ui:field='btnResume'>Resume</g:Button>
+        <g:Button ui:field='btnSlideToLeft'>Right to Left</g:Button>
+        <g:Button ui:field='btnSlideToRight'>Left to Right</g:Button> -->
+    </g:HTMLPanel>
+     
+	</g:HTMLPanel>
+</ui:UiBinder> 
